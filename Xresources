@@ -1,23 +1,3 @@
-URxvt.foreground: #dcdccc
-
-URxvt.depth: 32
-URxvt*background: rgba:0000/0000/0200/c800
-
-URxvt.saveLines: 32767
-URxvt.scrollBar: false
-
-URxvt*font: xft:Terminus:pixelsize=12
-
-URxvt.urgentOnBell: True
-
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: chromium
-URxvt.matcher.button: 2
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
-
-URxvt*colorUL: #c5f779
-URxvt*underlineColor: #c5f779
-
 ! Colors
 
 #define S_yellow        #b58900
@@ -54,3 +34,29 @@ URxvt*underlineColor: #c5f779
 *color13:                 S_violet
 *color14:                 S_base1
 *color15:                 S_base3
+
+URxvt.foreground: #dcdccc
+
+URxvt.depth: 32
+URxvt*background: rgba:0000/0000/0200/c800
+
+URxvt.saveLines: 32767
+URxvt.scrollBar: false
+
+URxvt*font: xft:Terminus:pixelsize=12
+
+URxvt.urgentOnBell: True
+
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: chromium
+URxvt.matcher.button: 2
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+
+URxvt*colorUL: #c5f779
+URxvt*underlineColor: #c5f779
+
+*fading:                    40
+*fadeColor:                 S_base03
+*cursorColor:               S_base1
+*pointerColorBackground:    S_base01
+*pointerColorForeground:    S_base1
