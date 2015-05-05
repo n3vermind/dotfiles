@@ -13,3 +13,5 @@ mkdir -p ~/.config
 ln -s ~/.dotfiles/awesome ~/.config/awesome
 
 ln -s ~/.dotfiles/zshrc ~/.zshrc
+
+ln -s ~/.dotfiles/gdbinit ~/.gdbinit

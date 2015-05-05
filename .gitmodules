@@ -4,3 +4,6 @@
 [submodule "vim/bundle/youcompleteme"]
 	path = vim/bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "peda"]
+	path = peda
+	url = https://github.com/longld/peda.git
