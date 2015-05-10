@@ -96,6 +96,32 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
+-- Create an ACPI widget
+if io.open("/sys/class/power_supply/BAT0", "r") == nil then
+    batterypresent = false
+else
+    batterypresent = true
+end
+
+
+batterywidget = wibox.widget.textbox()
+batterywidget:set_text(" | Battery | ")
+batterywidgettimer = timer({ timeout = 5 })
+batterywidgettimer:connect_signal("timeout",
+    function()
+        fh = assert(io.popen("acpi | cut -d' ' -f 4,5 -", "r"))
+        bat = fh:read("*l")
+        if bat == "5%" then
+            bat = " ^ " .. fh:read("*l")
+        end
+        batterywidget:set_text(" | " .. bat .. " | ")
+        fh:close()
+    end
+)
+if batterypresent == true then
+    batterywidgettimer:start()
+end
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -173,6 +199,9 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    if batterypresent == true then
+        right_layout:add(batterywidget)
+    end
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
