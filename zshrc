@@ -9,6 +9,7 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 plugins=(git)
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -18,4 +19,6 @@ export KEYTIMEOUT=1
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
-source $ZSH/oh-my-zsh.sh
+bindkey "^?" backward-delete-char
+
+export EDITOR="vim"
