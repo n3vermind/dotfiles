@@ -94,7 +94,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock("%a, %d/%m/%y, %H:%M")
 
 -- Create an ACPI widget
 if io.open("/sys/class/power_supply/BAT0", "r") == nil then
