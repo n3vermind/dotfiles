@@ -1,3 +1,4 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+start-pulseaudio-x11 &
 compton --backend glx --paint-on-overlay --vsync opengl &
 exec awesome
