@@ -1,62 +1,65 @@
-! Colors
-
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
-
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color8:                  S_base03
-*color9:                  S_orange
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
-
-URxvt.foreground: #dcdccc
-
 URxvt.depth: 32
 URxvt*background: rgba:0000/0000/0200/c800
 
 URxvt.saveLines: 32767
 URxvt.scrollBar: false
 
-URxvt*font: xft:Terminus:pixelsize=12
+URxvt*font: xft:Inconsolata:pixelsize=20
+URxvt*boldFont: xft:Inconsolata:pixelsize=20
+
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
 
 URxvt.urgentOnBell: True
 
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,url-select,clipboard
 URxvt.urlLauncher: chromium
 URxvt.matcher.button: 2
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 
-URxvt*colorUL: #c5f779
-URxvt*underlineColor: #c5f779
+URxvt.iso14755: false
+URxvt.iso15755_52: false
 
-*fading:                    40
-*fadeColor:                 S_base03
-*cursorColor:               S_base1
-*pointerColorBackground:    S_base01
-*pointerColorForeground:    S_base1
+URxvt*fading: 40
+
+*.colorUL: #c5f779
+*.underlineColor: #c5f779
+
+! special
+*.foreground:   #cdcdcc
+*.background:   #090300
+*.cursorColor:  #a5a2a2
+
+! black
+*.color0:       #090300
+*.color8:       #5c5855
+
+! red
+*.color1:       #db2d20
+*.color9:       #db2d20
+
+! green
+*.color2:       #01a252
+*.color10:      #01a252
+
+! yellow
+*.color3:       #fded02
+*.color11:      #fded02
+
+! blue
+*.color4:       #01a0e4
+*.color12:      #01a0e4
+
+! magenta
+*.color5:       #a16a94
+*.color13:      #a16a94
+
+! cyan
+*.color6:       #b5e4f4
+*.color14:      #b5e4f4
+
+! white
+*.color7:       #a5a2a2
+*.color15:      #f7f7f7

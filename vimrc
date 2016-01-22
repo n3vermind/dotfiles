@@ -3,7 +3,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set number cursorline mouse=a
 set incsearch
 set noswapfile
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()

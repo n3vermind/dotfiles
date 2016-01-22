@@ -1,4 +1,5 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 start-pulseaudio-x11 &
 compton --backend glx --paint-on-overlay --vsync opengl &
+xss-lock -l ~/.dotfiles/lock.sh &
 exec awesome
