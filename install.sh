@@ -49,3 +49,5 @@ link $DIR/awesome $HOME/.config/awesome
 link $DIR/zshrc $HOME/.zshrc
 
 link $DIR/gdbinit $HOME/.gdbinit
+
+link $DIR/gitconfig $HOME/.gitconfig
