@@ -46,6 +46,7 @@ install_youcompleteme
 mkdir -p ~/.config
 link $DIR/awesome $HOME/.config/awesome
 
+link $DIR/oh-my-zsh $HOME/.oh-my-zsh
 link $DIR/zshrc $HOME/.zshrc
 
 link $DIR/gdbinit $HOME/.gdbinit
