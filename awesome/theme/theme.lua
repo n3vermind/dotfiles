@@ -4,11 +4,11 @@
 -------------------------------
 -- If you want SVGs and extras, get them from garoth.com/awesome/sky-theme
 
-path = "/home/n3v/.config/awesome/theme/"
+path = ".config/awesome/theme/"
 
 -- BASICS
 theme = {}
-theme.font          = "d3euronism 8"
+theme.font          = "d3euronism 12"
 
 theme.bg_normal     = "#000000"
 theme.bg_focus      = theme.bg_normal
