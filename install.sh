@@ -52,3 +52,5 @@ link $DIR/zshrc $HOME/.zshrc
 link $DIR/gdbinit $HOME/.gdbinit
 
 link $DIR/gitconfig $HOME/.gitconfig
+
+link $DIR/urxvt $HOME/.urxvt

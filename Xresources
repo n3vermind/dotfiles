@@ -21,7 +21,7 @@ URxvt.matcher.button: 2
 
 URxvt.keysym.C-S-C: eval:selection_to_clipboard
 URxvt.keysym.C-S-V: eval:paste_clipboard
-URxvt.keysym.C-v: perl:keyboard-select:activate
+URxvt.keysym.C-x: perl:keyboard-select:activate
 URxvt.keysym.M-f: perl:matcher:last
 URxvt.keysym.C-f: perl:matcher:list
 
