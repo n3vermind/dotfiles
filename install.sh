@@ -36,6 +36,7 @@ cd $DIR
 git submodule update --init --recursive
 
 link $DIR/xinitrc $HOME/.xinitrc
+link $DIR/xprofile $HOME/.xprofile
 link $DIR/Xresources $HOME/.Xresources
 
 link $DIR/vim $HOME/.vim
