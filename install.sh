@@ -2,6 +2,10 @@
 
 set -e
 
+DIR=$(dirname "$(readlink -f "$0")")
+
+cd $DIR
+
 function link {
   SOURCE=$1
   DEST=$2
@@ -20,7 +24,11 @@ function link {
   fi
 }
 
+YOUCOMPLETEMERC_SRC=$DIR/youcompleteme.rc
+YOUCOMPLETEMERC_LINK=$DIR/vim/youcompleteme.rc
+
 function install_youcompleteme {
+  link $YOUCOMPLETEMERC_SRC $YOUCOMPLETEMERC_LINK
   YCMPATH=$DIR/vim/bundle/YouCompleteMe
   if [ -f $YCMPATH/third_party/ycmd/ycm_core.so ]; then
     echo "YouCompleteMe already installed"
@@ -29,9 +37,11 @@ function install_youcompleteme {
   fi
 }
 
-DIR=$(dirname "$(readlink -f "$0")")
-
-cd $DIR
+function remove_youcompleteme {
+  if [ -L $YOUCOMPLETEMERC_LINK ]; then
+    unlink $YOUCOMPLETEMERC_LINK
+  fi
+}
 
 git submodule update --init --recursive
 
@@ -41,8 +51,16 @@ link $DIR/Xresources $HOME/.Xresources
 
 link $DIR/vim $HOME/.vim
 link $DIR/vimrc $HOME/.vimrc
+
+read -p "Do you want to install youcompleteme? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  install_youcompleteme
+else
+  remove_youcompleteme
+fi
+
 vim +PluginInstall +qall
-install_youcompleteme
 
 mkdir -p ~/.config
 link $DIR/awesome $HOME/.config/awesome

@@ -11,16 +11,20 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Valloric/YouCompleteMe'
+
+if filereadable(expand("~/.vim/youcompleteme.rc"))
+  source ~/.vim/youcompleteme.rc
+endif
+
+if filereadable(expand("~/.vim/local.rc"))
+  source ~/.vim/local.rc
+endif
 
 call vundle#end()
 
 filetype plugin indent on
 syntax on
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf=0
-set completeopt-=preview
 set backspace=indent,eol,start
 
 hi SpellBad term=reverse cterm=reverse ctermbg=none
