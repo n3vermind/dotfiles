@@ -20,13 +20,3 @@ bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
 bindkey "^?" backward-delete-char
-
-export EDITOR="vim"
-export TERMINAL="urxvt"
-export BROWSER="chromium"
-export SCREENLOCK="sxlock"
-
-ZSHLOCAL=$HOME/.zshlocal.rc
-if [[ -f $ZSHLOCAL ]]; then
-  . $ZSHLOCAL
-fi

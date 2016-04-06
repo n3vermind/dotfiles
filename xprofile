@@ -2,3 +2,10 @@
 start-pulseaudio-x11 &
 compton --backend glx --paint-on-overlay --vsync opengl &
 xss-lock -l ~/.dotfiles/lock.sh &
+
+export EDITOR="vim"
+export TERMINAL="urxvt"
+export BROWSER="chromium"
+export SCREENLOCK="sxlock"
+
+[[ -f ~/.overrides.rc ]] && . ~/.overrides.rc
