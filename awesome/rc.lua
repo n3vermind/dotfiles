@@ -98,16 +98,21 @@ if io.open("/sys/class/power_supply/BAT0", "r") then
   batterywidget:set_text(" | Battery | ")
   batterywidgettimer = timer({ timeout = 5 })
   batterywidgettimer:connect_signal("timeout",
-      function()
-          fh = assert(io.popen("acpi | cut -d' ' -f 4,5 -", "r"))
-          bat = fh:read("*l")
-          if not bat:find(",") then
-              bat = " ^ " .. fh:read("*l")
-          end
-          batterywidget:set_text(" | " .. bat .. " | ")
-          fh:close()
+    function()
+      fh = assert(io.popen("acpi | cut -d' ' -f 4,5 -", "r"))
+      bat = fh:read("*l")
+      if not bat:find(",") then
+        bat2 = fh:read("*l")
+        if bat2 then
+          bat = " ^ " .. bat2
+        else
+          bat = "Full"
+        end
       end
-  )
+      batterywidget:set_text(" | " .. bat .. " | ")
+      fh:close()
+    end
+    )
   batterywidgettimer:start()
 end
 
