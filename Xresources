@@ -15,16 +15,6 @@ Xft.dpi: 96
 
 URxvt.urgentOnBell: True
 
-URxvt.perl-ext-common: default,matcher,selection,selection-popup,eval,keyboard-select
-URxvt.url-launcher: chromium
-URxvt.matcher.button: 2
-
-URxvt.keysym.C-S-C: eval:selection_to_clipboard
-URxvt.keysym.C-S-V: eval:paste_clipboard
-URxvt.keysym.C-x: perl:keyboard-select:activate
-URxvt.keysym.M-f: perl:matcher:last
-URxvt.keysym.C-f: perl:matcher:list
-
 URxvt.iso14755: false
 URxvt.iso15755_52: false
 

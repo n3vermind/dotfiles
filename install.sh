@@ -72,4 +72,4 @@ link $DIR/gdbinit $HOME/.gdbinit
 
 link $DIR/gitconfig $HOME/.gitconfig
 
-link $DIR/urxvt $HOME/.urxvt
+link $DIR/tmux.conf $HOME/.tmux.conf
