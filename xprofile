@@ -1,7 +1,6 @@
 DIR=$HOME/.dotfiles/
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-source $DIR/set_dpi.sh
 start-pulseaudio-x11 &
 compton -b --backend glx --paint-on-overlay --vsync opengl
 xss-lock -l $DIR/lock.sh &
