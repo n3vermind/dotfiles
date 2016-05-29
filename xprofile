@@ -1,11 +1,15 @@
+DIR=$HOME/.dotfiles/
+
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+source $DIR/set_dpi.sh
 start-pulseaudio-x11 &
-compton --backend glx --paint-on-overlay --vsync opengl &
-xss-lock -l ~/.dotfiles/lock.sh &
+compton -b --backend glx --paint-on-overlay --vsync opengl
+xss-lock -l $DIR/lock.sh &
+feh --bg-scale $DIR/bg1.jpg
 
 export EDITOR="vim"
 export TERMINAL="urxvt"
 export BROWSER="chromium"
-export SCREENLOCK="sxlock"
+export SCREENLOCK="$DIR/lock.sh"
 
 [[ -f ~/.overrides.rc ]] && . ~/.overrides.rc

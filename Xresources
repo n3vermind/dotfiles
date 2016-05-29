@@ -4,14 +4,13 @@ URxvt*background: rgba:0000/0000/0200/c800
 URxvt.saveLines: 32767
 URxvt.scrollBar: false
 
-URxvt*font: xft:Inconsolata:pixelsize=20
-URxvt*boldFont: xft:Inconsolata:pixelsize=20
+URxvt*font: xft:Inconsolata:size=14
+URxvt*boldFont: xft:Inconsolata:size=14
 
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
 Xft.hinting: 1
 Xft.antialias: 1
-Xft.dpi: 96
 
 URxvt.urgentOnBell: True
 

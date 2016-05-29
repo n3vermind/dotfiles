@@ -1,2 +1,2 @@
 [ -f ~/.xprofile ] && source ~/.xprofile
-exec awesome
+exec i3

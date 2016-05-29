@@ -45,6 +45,8 @@ function remove_youcompleteme {
 
 git submodule update --init --recursive
 
+link $DIR $HOME/.dotfiles
+
 link $DIR/xinitrc $HOME/.xinitrc
 link $DIR/xprofile $HOME/.xprofile
 link $DIR/Xresources $HOME/.Xresources
@@ -63,7 +65,8 @@ fi
 vim +PluginInstall +qall
 
 mkdir -p ~/.config
-link $DIR/awesome $HOME/.config/awesome
+link $DIR/i3 $HOME/.config/i3
+link $DIR/i3status $HOME/.config/i3status
 
 link $DIR/oh-my-zsh $HOME/.oh-my-zsh
 link $DIR/zshrc $HOME/.zshrc
