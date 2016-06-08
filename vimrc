@@ -19,6 +19,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'fatih/vim-go'
 
 if filereadable(expand("~/.vim/youcompleteme.rc"))
   source ~/.vim/youcompleteme.rc

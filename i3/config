@@ -134,6 +134,15 @@ bindsym $mod+r mode "resize"
 
 for_window [class="mpv"] floating enable
 for_window [class="chrom*"] border pixel 2
+for_window [class="qemu-*"] border pixel 2
+for_window [instance="scratchpad"] border pixel 1
+for_window [instance="scratchpad"] floating enable
+for_window [instance="scratchpad"] move scratchpad
+
+bindsym $mod+grave [instance="scratchpad"] scratchpad show; move position center
+
+exec --no-startup-id "urxvt -name scratchpad -geometry 140x40"
+
 
 # class                 border  backgr. text
 client.focused			    #484848 #c80000 #000000
