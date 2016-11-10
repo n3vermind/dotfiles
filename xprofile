@@ -9,6 +9,5 @@ feh --bg-scale $DIR/bg1.jpg
 export EDITOR="vim"
 export TERMINAL="urxvt"
 export BROWSER="chromium"
-export SCREENLOCK="$DIR/lock.sh"
 
 [[ -f ~/.overrides.rc ]] && . ~/.overrides.rc

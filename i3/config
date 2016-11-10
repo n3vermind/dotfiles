@@ -34,7 +34,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-bindsym $alt+Control+l exec $SCREENLOCK
+bindsym $alt+Control+l exec xset s activate
 
 bindsym $mod+b exec $BROWSER
 
