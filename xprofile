@@ -2,7 +2,7 @@ DIR=$HOME/.dotfiles/
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 start-pulseaudio-x11 &
-compton -b --backend glx --paint-on-overlay --vsync opengl
+compton -b --backend glx --paint-on-overlay --vsync opengl --xrender-sync-fence
 xss-lock -l $DIR/lock.sh &
 feh --bg-scale $DIR/bg1.jpg
 

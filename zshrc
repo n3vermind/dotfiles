@@ -4,11 +4,8 @@ ZSH_THEME="afowler"
 DISABLE_AUTO_UPDATE="true"
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-    mkdir $ZSH_CACHE_DIR;
-fi
 
-plugins=(git)
+plugins=(git vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 bindkey -v
@@ -20,3 +17,5 @@ bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
 bindkey "^?" backward-delete-char
+
+[ -f ~/.zshlocal.rc ] && source ~/.zshlocal.rc

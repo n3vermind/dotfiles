@@ -1,7 +1,7 @@
 #!/bin/bash
 
 bgfile="$(mktemp --suffix=.png)"
-locker="i3lock -c 000000 -i $bgfile -n"
+locker="i3lock -i $bgfile -n -f"
 
 # Delay in seconds. Note that by default systemd-logind allows a maximum sleep
 # delay of 5 seconds.
