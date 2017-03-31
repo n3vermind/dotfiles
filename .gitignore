@@ -1,6 +1,6 @@
 *.pyc
 vim/bundle/*
-!vim/bundle/vundle
+!vim/bundle/Vundle.vim
 vim/.netrwhist
 vim/local.rc
 vim/youcompleteme.rc

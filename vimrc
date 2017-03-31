@@ -15,7 +15,7 @@ inoremap jk <ESC>
 
 let g:airline_theme='powerlineish'
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'

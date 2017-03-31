@@ -2,7 +2,7 @@
 	path = peda
 	url = https://github.com/longld/peda.git
 [submodule "vim/bundle/vundle"]
-	path = vim/bundle/vundle
+	path = vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
