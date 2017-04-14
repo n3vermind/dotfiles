@@ -3,7 +3,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set number cursorline mouse=a
 set incsearch ignorecase smartcase
 set noswapfile
-set clipboard+=unnamedplus,unnamed
+set clipboard=unnamedplus,unnamed
 set splitbelow splitright
 set backspace=indent,eol,start
 set laststatus=2
