@@ -2,8 +2,8 @@ DIR=$HOME/.dotfiles/
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 start-pulseaudio-x11 &
-compton -b --backend glx --paint-on-overlay --vsync opengl --xrender-sync-fence
-xss-lock -l $DIR/lock.sh &
+compton &
+xss-lock -l -- i3lock -c 000000 &
 feh --bg-scale $DIR/bg1.jpg
 
 export EDITOR="vim"
