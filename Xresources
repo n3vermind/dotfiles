@@ -1,16 +1,12 @@
 URxvt.depth: 32
+
 URxvt*background: rgba:0000/0000/0200/c800
 
-URxvt.saveLines: 32767
+URxvt.saveLines: 100000
 URxvt.scrollBar: false
 
 URxvt*font: xft:Inconsolata:size=10
 URxvt*boldFont: xft:Inconsolata:size=10
-
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
-Xft.hinting: 1
-Xft.antialias: 1
 
 URxvt.urgentOnBell: True
 
@@ -19,42 +15,57 @@ URxvt.iso15755_52: false
 
 URxvt*fading: 40
 
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: $BROWSER
+URxvt.keysym.Control-n: perl:matcher:list
+
+Xft.dpi: 110
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: true
+Xft.antialias: true
+Xft.autohint: true
+Xft.rgba: rgba
+
+! Color scheme
+! special
+*.foreground:   #eee4e1
+*.background:   #1b1918
+*.cursorColor:  #eee4e1
 *.colorUL: #c5f779
 *.underlineColor: #c5f779
 
-! special
-*.foreground:   #cdcdcc
-*.background:   #090300
-*.cursorColor:  #a5a2a2
 
 ! black
-*.color0:       #090300
-*.color8:       #5c5855
+*.color0:       #1b1918
+*.color8:       #766e6b
 
 ! red
-*.color1:       #db2d20
-*.color9:       #db2d20
+*.color1:       #f22c40
+*.color9:       #f22c40
 
 ! green
-*.color2:       #01a252
-*.color10:      #01a252
+*.color2:       #5ab738
+*.color10:      #5ab738
 
 ! yellow
-*.color3:       #fded02
-*.color11:      #fded02
+*.color3:       #d5911a
+*.color11:      #d5911a
 
 ! blue
-*.color4:       #01a0e4
-*.color12:      #01a0e4
+*.color4:       #407ee7
+*.color12:      #407ee7
 
 ! magenta
-*.color5:       #a16a94
-*.color13:      #a16a94
+*.color5:       #6666ea
+*.color13:      #6666ea
 
 ! cyan
-*.color6:       #b5e4f4
-*.color14:      #b5e4f4
+*.color6:       #00ad9c
+*.color14:      #00ad9c
 
 ! white
-*.color7:       #a5a2a2
-*.color15:      #f7f7f7
+*.color7:       #a8a19f
+*.color15:      #f1efee
+
+! vim:ft=xdefaults

@@ -13,7 +13,7 @@ let mapleader = ","
 
 inoremap jk <ESC>
 
-let g:airline_theme='powerlineish'
+let g:airline_theme='minimalist'
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

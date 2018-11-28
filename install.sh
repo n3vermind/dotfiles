@@ -66,7 +66,7 @@ vim +PluginInstall +qall
 
 mkdir -p ~/.config
 link $DIR/i3 $HOME/.config/i3
-link $DIR/i3status $HOME/.config/i3status
+link $DIR/polybar $HOME/.config/polybar
 
 link $DIR/oh-my-zsh $HOME/.oh-my-zsh
 link $DIR/zshrc $HOME/.zshrc

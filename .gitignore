@@ -4,3 +4,4 @@ vim/bundle/*
 vim/.netrwhist
 vim/local.rc
 vim/youcompleteme.rc
+polybar/override
