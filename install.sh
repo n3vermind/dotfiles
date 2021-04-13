@@ -47,10 +47,6 @@ git submodule update --init --recursive
 
 link $DIR $HOME/.dotfiles
 
-link $DIR/xinitrc $HOME/.xinitrc
-link $DIR/xprofile $HOME/.xprofile
-link $DIR/Xresources $HOME/.Xresources
-
 link $DIR/vim $HOME/.vim
 link $DIR/vimrc $HOME/.vimrc
 
@@ -65,8 +61,8 @@ fi
 vim +PluginInstall +qall
 
 mkdir -p ~/.config
-link $DIR/i3 $HOME/.config/i3
-link $DIR/polybar $HOME/.config/polybar
+link $DIR/sway $HOME/.config/sway
+link $DIR/waybar $HOME/.config/waybar
 
 link $DIR/oh-my-zsh $HOME/.oh-my-zsh
 link $DIR/zshrc $HOME/.zshrc
