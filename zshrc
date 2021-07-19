@@ -1,12 +1,13 @@
-export ZSH=$HOME/.oh-my-zsh/
+if [ $UID -eq 0 ]; then CARETCOLOR="red"; else CARETCOLOR="blue"; fi
 
-ZSH_THEME="afowler"
-DISABLE_AUTO_UPDATE="true"
+setopt prompt_subst
+PROMPT='%m %F{blue}% :: %F{green} %3~ %F{$CARETCOLOR}> %f'
 
-ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 
-plugins=(git vi-mode)
-source $ZSH/oh-my-zsh.sh
+autoload -Uz compinit && compinit
 
 bindkey -v
 export KEYTIMEOUT=1
@@ -15,7 +16,11 @@ bindkey -M vicmd 'k' up-line-or-search
 bindkey -M vicmd 'j' down-line-or-search
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
+bindkey '^R' history-incremental-search-backward
 
 bindkey "^?" backward-delete-char
+
+alias ls='ls --color=auto'
+export EDITOR=vim
 
 [ -f ~/.zshlocal.rc ] && source ~/.zshlocal.rc
