@@ -3,5 +3,3 @@ vim/bundle/*
 !vim/bundle/Vundle.vim
 vim/.netrwhist
 vim/local.rc
-vim/youcompleteme.rc
-polybar/override

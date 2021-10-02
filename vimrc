@@ -8,6 +8,7 @@ set splitbelow splitright
 set backspace=indent,eol,start
 set laststatus=2
 set ttyfast
+set ttymouse=sgr
 set formatoptions+=j "delete comment character when joining lines
 let mapleader = ","
 
@@ -24,10 +25,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
 Plugin 'ctrlpvim/ctrlp.vim'
-
-if filereadable(expand("~/.vim/youcompleteme.rc"))
-  source ~/.vim/youcompleteme.rc
-endif
+Plugin 'dense-analysis/ale'
 
 call vundle#end()
 
@@ -38,5 +36,14 @@ endif
 filetype plugin indent on
 syntax on
 
+hi SpellCap term=reverse cterm=reverse ctermbg=none
 hi SpellBad term=reverse cterm=reverse ctermbg=none
 hi Visual term=reverse cterm=reverse ctermbg=none
+
+set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+let g:ale_linters = {'rust': ['analyzer']}
+let g:ale_completion_autoimport = 1
+let g:ale_fixers = {'rust': ['rustfmt']}
+let g:ale_fix_on_save = 1
+nnoremap <leader>g :ALEGoToDefinition<CR>

@@ -120,9 +120,9 @@ for_window [app_id="scratchpad"] move scratchpad
 
 bindsym $mod+grave [app_id="scratchpad"] scratchpad show; move position center
 
-output DP-2 pos 0 0
-output HDMI-A-1 pos 2560 0
-output DP-3 pos 5120 0
+output "Dell Inc. DELL U2518D 0WG2J84IB2NL" pos 0 0
+output "Dell Inc. DELL U2518D 0WG2J84I956L" pos 2560 0
+output "Dell Inc. DELL U2518D 0WG2J84I924L" pos 5120 0
 
 output "*" bg ~/.dotfiles/bg.jpg stretch
 exec alacritty --class scratchpad
