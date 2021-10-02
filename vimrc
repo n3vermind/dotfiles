@@ -1,6 +1,6 @@
 set nocompatible
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-set number cursorline mouse=a
+set number mouse=a
 set incsearch ignorecase smartcase
 set noswapfile
 set clipboard=unnamedplus,unnamed
@@ -26,6 +26,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dense-analysis/ale'
+Plugin 'arcticicestudio/nord-vim'
 
 call vundle#end()
 
@@ -36,10 +37,6 @@ endif
 filetype plugin indent on
 syntax on
 
-hi SpellCap term=reverse cterm=reverse ctermbg=none
-hi SpellBad term=reverse cterm=reverse ctermbg=none
-hi Visual term=reverse cterm=reverse ctermbg=none
-
 set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_completion_enabled = 1
 let g:ale_linters = {'rust': ['analyzer']}
@@ -47,3 +44,11 @@ let g:ale_completion_autoimport = 1
 let g:ale_fixers = {'rust': ['rustfmt']}
 let g:ale_fix_on_save = 1
 nnoremap <leader>g :ALEGoToDefinition<CR>
+
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+colorscheme nord
+hi Normal guibg=NONE
