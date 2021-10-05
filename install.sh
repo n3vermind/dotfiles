@@ -37,7 +37,6 @@ mkdir -p ~/.config
 link $DIR/sway $HOME/.config/sway
 link $DIR/waybar $HOME/.config/waybar
 
-link $DIR/oh-my-zsh $HOME/.oh-my-zsh
 link $DIR/zshrc $HOME/.zshrc
 
 link $DIR/gdbinit $HOME/.gdbinit
