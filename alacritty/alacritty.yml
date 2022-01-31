@@ -17,7 +17,8 @@ font:
     family: Inconsolata
     style: Regular
 
-background_opacity: 0.8
+window:
+  opacity: 0.8
 
 colors:
   primary:
