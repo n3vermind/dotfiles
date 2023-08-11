@@ -22,7 +22,7 @@
         "format": "{}% "
     },
     "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp2_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon5/temp2_input",
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
@@ -48,7 +48,7 @@
     },
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
@@ -58,5 +58,5 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    }
+    },
 }
