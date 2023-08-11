@@ -3,7 +3,7 @@
     "height": 22,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "memory", "cpu", "network", "temperature", "backlight", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["pulseaudio", "memory", "cpu", "network", "temperature", "backlight", "bluetooth", "battery", "battery#bat2", "clock", "tray"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -15,17 +15,17 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% \uf2db",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% \uf538"
     },
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon5/temp2_input",
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["\uf2c9"]
     },
     "battery": {
         "states": {
@@ -33,30 +33,33 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% \uf1e6",
+        "format-plugged": "{capacity}% \uf1e6",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-wifi": "{essid} ({signalStrength}%) \uf1eb",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} \uf796",
         "format-disconnected": ""
     },
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-muted": "\uf6a9 {format_source}",
+        "format-source": "{volume}% \uf130",
+        "format-source-muted": "\uf131",
         "format-icons": {
-            "headphone": "",
-            "default": ["", "", ""]
+          "default": ["\uf028"],
+          "headphone": ["\uf025"],
+          "headset": ["\uf025"],
         },
         "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+        "format": "",
+        "format-connected-battery": "{device_battery_percentage}% \uf294",
     },
 }
