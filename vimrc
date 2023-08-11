@@ -27,6 +27,7 @@ Plugin 'fatih/vim-go'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 
@@ -41,9 +42,10 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_completion_enabled = 1
 let g:ale_linters = {'rust': ['analyzer']}
 let g:ale_completion_autoimport = 1
-let g:ale_fixers = {'rust': ['rustfmt']}
+let g:ale_fixers = {'rust': ['rustfmt', 'remove_trailing_lines', 'trim_whitespace']}
 let g:ale_fix_on_save = 1
 nnoremap <leader>g :ALEGoToDefinition<CR>
+nnoremap <leader>f :ALECodeAction<CR>
 
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
