@@ -6,6 +6,7 @@ PROMPT='%m %F{blue}% :: %F{green} %3~ %F{$CARETCOLOR}> %f'
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
+setopt HIST_IGNORE_ALL_DUPS
 
 autoload -Uz compinit && compinit
 
